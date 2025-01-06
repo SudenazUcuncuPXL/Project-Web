@@ -9,208 +9,88 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-header h1 {
+header {
     background: linear-gradient(90deg, #333, #555);
     color: white;
-    padding: 2rem 0;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    padding: 3rem 0;
+}
+
+h1 {
     font-size: 2.5rem;
 }
 
-.header {
-    overflow: hidden;
-    background-color: #f1f1f1;
-    padding: 20px 10px;
-    margin-bottom: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+main {
+    padding: 20px;
+    flex: 1;
 }
 
-.header a {
-    float: left;
-    color: #333;
+.intro {
     text-align: center;
-    padding: 12px;
-    text-decoration: none;
-    font-size: 18px;
-    line-height: 25px;
-    border-radius: 4px;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-top: 50px;
 }
 
-.header h1 {
-    float: left;
+.intro h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
 }
 
-.header a:hover {
-    background-color: #007BFF;
-    color: #fff;
+.intro p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.5;
 }
 
-.header-right {
-    float: right;
-}
-
-.container {
+.onderdelen {
     display: flex;
-    align-items: flex-start;
-}
-
-.sidenav {
-    display: block;
-    top: 0;
-    left: 0;
-    width: 150px;
-    background: #eee;
-    overflow-x: hidden;
-    padding: 8px 0;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-}
-
-.sidenav a {
-    padding: 6px 8px 6px 16px;
-    text-decoration: none;
-    font-size: 18px;
-    color: #2196F3;
-    display: block;
-}
-
-.sidenav a:hover {
-    color: #064579;
-    background-color: #ddd;
-}
-
-.profiel-container {
-    display: flex;
+    gap: 2rem;
+    margin-top: 50px;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    gap: 2rem;
-    margin: 2rem auto;
-    max-width: 800px;
-    flex-direction: column;
-    transition: all 0.3s ease;
 }
 
-.profiel-container.open {
-    flex-direction: column;
-}
-
-.profiel {
-    display: block;
-    margin: 0 auto 20px;
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
+.onderdeel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 180px;
+    height: 180px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.profiel:hover {
-    transform: scale(1.05) rotate(5deg);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
-}
-
-.profiel:active {
-    transform: scale(0.95);
-    border: 3px solid #007BFF;
-}
-
-.overmezelf {
-    flex: 1;
-    max-height: 200px;
-    opacity: 1;
-    padding: 1rem;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    transition: all 0.3s ease;
-    overflow: hidden;
-}
-
-.overmezelf.hidden {
-    max-height: 0;
-    opacity: 0;
-    padding: 0;
-    border: none;
-}
-
-#toggleButton {
-    padding: 0.5rem 1rem;
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    align-self: center;
-}
-
-#toggleButton:hover {
-    background-color: #0056b3;
-}
-
-main {
-    padding: 1rem;
-}
-
-h1, h2, h3 {
+.onderdeel a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
     color: #333;
 }
 
-.overmezelf, .opleidingen li, .werkervaringen li {
-    margin-bottom: 1rem;
-    padding: 1.5rem;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+.circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2196F3;
+    color: white;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    font-size: 1.5rem;
+    font-weight: bold;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.overmezelf:hover, .opleidingen li:hover, .werkervaringen li:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
-
-.opleidingen, .werkervaringen {
-    list-style: none;
-    padding: 0;
-}
-
-.table-container {
-    overflow-x: auto;
-    margin-bottom: 2rem;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 1rem;
-}
-
-thead {
-    background-color: #007BFF;
-    color: white;
-}
-
-td, th {
-    padding: 0.75rem;
-    text-align: left;
-    border: 1px solid #ddd;
-}
-
-tbody tr:nth-child(odd) {
-    background-color: #f2f2f2;
-}
-
-tbody tr:hover {
-    background-color: #e3f2fd;
-}
-
-.talen {
-    margin-top: 1rem;
+.circle:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
 footer {
@@ -244,43 +124,14 @@ footer button:hover {
 }
 
 @media screen and (max-width: 480px) {
-    .container {
+    .onderdelen {
         flex-direction: column;
-        padding: 10px;
+        gap: 1.5rem;
     }
 
-    .header {
-        text-align: center;
-    }
-
-    .sidenav {
-        display: block;
-    }
-
-    .profiel {
-        width: 150px;
-        height: 150px;
-    }
-
-    table {
-        display: block;
-        width: 100%;
-        overflow-x: auto;
-    }
-
-    .table-container {
-        margin: 1rem;
-    }
-
-    .overmezelf {
-        max-height: 120px;
-        overflow: scroll;
-        opacity: 1;
-    }
-}
-
-@media screen and (min-width: 480px) {
-    .container {
-        flex-direction: row;
+    .circle {
+        font-size: 1.2rem;
+        width: 160px;
+        height: 160px;
     }
 }
