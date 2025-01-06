@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculum Vitae</title>
+    <link rel="stylesheet" href="cv.css">
+</head>
+<body>
+    <header>
+        <h1>Curriculum Vitae</h1>
+    </header>
+
+    <div class="header">
+        <h1>Sude Üçüncü</h1>
+        <div class="header-right">
+            <a href="index.html">Portfolio</a>
+            <a href="#">CV</a>
+            <a href="logboek.html">Logboek</a>
+            <a href="ontwikkeling.html">Ontwikkeling</a>
+            <a href="opdrachten.html">Opdrachten</a>
+            <a href="reflectie.html">Reflectie</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="sidenav">
+            <a href="#opleidingen">Opleidingen</a>
+            <a href="#werkervaringen">Werkervaringen</a>
+            <a href="#vaardigheden">Vaardigheden</a>
+            <a href="#talen">Talen</a>
+        </div>
+        <div class="profiel-container" id="profielContainer">
+            <img src="assets/sude.jpg" alt="Profielfoto" class="profiel" onclick="window.open('https://www.linkedin.com/in/sudenaz-ucuncu/', '_blank')">
+            <div class="overmezelf hidden" id="overMezelf">
+                <h2>Over mezelf</h2>
+                <p>Ik studeer programmeren en ben enthousiast over technologie en softwareontwikkeling. Ik geniet ervan om problemen op te lossen en ben altijd op zoek naar manieren om mijn vaardigheden uit te breiden. Mijn interesse gaat uit naar verschillende programmeertalen en technologieën, waarbij ik me voortdurend probeer te verbeteren. In mijn vrije tijd werk ik aan persoonlijke projecten en leer ik nieuwe concepten die mij verder helpen in mijn studie.</p>
+            </div>
+            <button id="toggleButton">Toon / Verberg</button>
+        </div>
+    </div>
+
+    <main>
+        <section id="opleidingen">
+            <h2>Opleidingen</h2>
+            <ul class="opleidingen">
+                <li>
+                    <h3>Campus de Helix 2017 - 2023</h3>
+                    <p>Diploma TSO 3e graad Boekhouden-Informatica</p>
+                </li>
+            </ul>
+        </section>
+
+        <section id="werkervaringen">
+            <h2>Werkervaringen</h2>
+            <ul class="werkervaringen">
+                <li>
+                    <h3>Albert Heijn</h3>
+                    <p><strong>Periode:</strong> Nov 2022 - Mar 2023</p>
+                    <p><strong>Beschrijving:</strong> Verantwoordelijk voor het aanvullen van rekken, het controleren van de voorraad en werken aan de kassa. Deze ervaring versterkte mijn klantenservicevaardigheden en mijn vermogen om snel en efficiënt te werken in een drukke winkelomgeving.</p>
+                </li>
+
+                <li>
+                    <h3>H&M</h3>
+                    <p><strong>Periode:</strong> Jun 2022 - Aug 2022</p>
+                    <p><strong>Beschrijving:</strong> Klanten helpen bij het vinden van kleding en het organiseren van de winkel. Deze functie verbeterde mijn communicatieve vaardigheden en mijn ervaring met het werken in teamverband.</p>
+                </li>
+
+                <li>
+                    <h3>Carrefour</h3>
+                    <p><strong>Periode:</strong> Jun 2021 - Aug 2021</p>
+                    <p><strong>Beschrijving:</strong> Werkte in de bakkerij, waarbij ik producten bereidde, klanten hielp en zorgde voor een schone werkomgeving. Deze baan leerde me het belang van hygiëne en het werken onder tijdsdruk.</p>
+                </li>
+            </ul>
+        </section>
+
+        <section id="vaardigheden">
+            <h2>Vaardigheden</h2>
+            <div class="table-container">
+                <table>
+                    <thead>
+                    <tr>
+                        <th>Vaardigheid</th>
+                        <th>Niveau</th>
+                    </tr>
+                    </thead>
+
+                    <tbody>
+                    <tr>
+                        <td>HTML & CSS</td>
+                        <td>Goed</td>
+                    </tr>
+
+                    <tr>
+                        <td>C#</td>
+                        <td>Goed</td>
+                    </tr>
+
+                    <tr>
+                        <td>SQL</td>
+                        <td>Goed</td>
+                    </tr>
+
+                    <tr>
+                        <td>Python</td>
+                        <td>Basis</td>
+                    </tr>
+
+                    <tr>
+                        <td>Java</td>
+                        <td>Basis</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="talen">
+            <h2 class="talen">Talen</h2>
+            <div class="table-container">
+                <table>
+                    <thead>
+                    <tr>
+                        <th>Talen</th>
+                        <th>Niveau</th>
+                    </tr>
+                    </thead>
+
+                    <tbody>
+                    <tr>
+                        <td>Turks</td>
+                        <td>Gevorderd</td>
+                    </tr>
+
+                    <tr>
+                        <td>Nederlands</td>
+                        <td>Gevorderd</td>
+                    </tr>
+
+                    <tr>
+                        <td>Engels</td>
+                        <td>Goed</td>
+                    </tr>
+
+                    <tr>
+                        <td>Frans</td>
+                        <td>Basis</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <span>Sude Üçüncü - 1PROd</span>
+            <span>Opdracht Curriculum Vitae</span>
+            <button onclick="scrollToTop()">Terug naar boven</button>
+        </div>
+    </footer>
+
+    <script>
+        function scrollToTop() {
+            window.scrollTo(
+                {
+                    top: 0,
+                    behavior: 'smooth'
+                }
+            )
+        }
+
+        document.getElementById("toggleButton").addEventListener("click", function () {
+            const overMezelf = document.getElementById("overMezelf");
+            const profielContainer = document.getElementById("profielContainer");
+
+            overMezelf.classList.toggle("hidden");
+            profielContainer.classList.toggle("open");
+        })
+    </script>
+</body>
+</html>
