@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Arial", sans-serif;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header h1 {
+    background: linear-gradient(90deg, #333, #555);
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    font-size: 2.5rem;
+}
+
+.header {
+    overflow: hidden;
+    background-color: #f1f1f1;
+    padding: 20px 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header a {
+    float: left;
+    color: #333;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 25px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.header h1 {
+    float: left;
+}
+
+.header a:hover {
+    background-color: #007BFF;
+    color: #fff;
+}
+
+.header-right {
+    float: right;
+}
+
+section {
+    flex: 1;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.week {
+    margin-bottom: 30px;
+}
+
+.opdracht {
+    background-color: #ecf0f1;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.opdracht p {
+    font-size: 1rem;
+    color: #2c3e50;
+    margin: 0;
+}
+
+details {
+    margin-top: 10px;
+}
+
+details summary {
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1.1rem;
+    color: #2980b9;
+}
+
+details p {
+    margin-top: 10px;
+    font-size: 0.95rem;
+    color: #34495e;
+}
+
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.content-wrapper h2 {
+    margin-top: 10px;
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+    color: #34495e;
+    border-bottom: 2px solid #ecf0f1;
+    padding-bottom: 5px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem;
+    position: relative;
+}
+
+footer .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+footer button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+footer button:hover {
+    background-color: #005BFF;
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        font-size: 14px;
+        padding: 0;
+    }
+
+    .content-wrapper h2 {
+        font-size: 18px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .week {
+        margin-bottom: 20px;
+    }
+
+    .opdracht p {
+        font-size: 14px;
+    }
+
+    details {
+        margin-top: 10px;
+    }
+
+    summary {
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+}
